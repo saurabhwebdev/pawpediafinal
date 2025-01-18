@@ -230,13 +230,13 @@ async function generateAndCacheBlogPosts() {
       try {
         const blogContent = await geminiService.generateBlogPost(topic);
         if (!blogContent) continue;
-
+      
         const image = await dogApi.getRandomImage();
-        
-        const post = {
+      
+      const post = {
           id: `post-${i + 1}`,
-          ...blogContent,
-          image: image,
+        ...blogContent,
+        image: image,
           timestamp: Date.now()
         };
         

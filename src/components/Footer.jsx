@@ -1,33 +1,61 @@
 import { Link } from 'react-router-dom'
 
 const popularBreeds = [
-  { name: 'German Shepherd', href: '/breeds/german/shepherd' },
-  { name: 'English Bulldog', href: '/breeds/english/bulldog' },
-  { name: 'French Bulldog', href: '/breeds/french/bulldog' },
-  { name: 'Poodle', href: '/breeds/poodle' }
+  { name: 'Labrador', href: '/breeds/labrador' },
+  { name: 'Husky', href: '/breeds/husky' },
+  { name: 'Poodle', href: '/breeds/poodle' },
+  { name: 'Bulldog', href: '/breeds/bulldog' },
+  { name: 'Shepherd', href: '/breeds/shepherd' },
+  { name: 'Retriever', href: '/breeds/retriever' },
+  { name: 'Rottweiler', href: '/breeds/rottweiler' },
+  { name: 'Beagle', href: '/breeds/beagle' }
 ]
 
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'All Breeds', href: '/breeds' },
-  { name: 'Sub-Breeds', href: '/sub-breeds' },
   { name: 'Random Dog', href: '/random' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Shop', href: '/shop' },
   { name: 'Dog Facts', href: '/facts' }
 ]
 
-const popularSubBreeds = [
-  { name: 'German Shepherd', href: '/breeds/german/shepherd' },
-  { name: 'English Bulldog', href: '/breeds/english/bulldog' },
-  { name: 'French Bulldog', href: '/breeds/french/bulldog' },
-  { name: 'Toy Poodle', href: '/breeds/poodle/toy' },
-  { name: 'Miniature Poodle', href: '/breeds/poodle/miniature' }
+const blogCategories = [
+  { name: 'Training & Behavior', href: '/blog?category=training' },
+  { name: 'Health & Wellness', href: '/blog?category=health' },
+  { name: 'Nutrition & Diet', href: '/blog?category=nutrition' },
+  { name: 'Lifestyle & Care', href: '/blog?category=lifestyle' },
+  { name: 'Special Topics', href: '/blog?category=special' },
+  { name: 'Puppy Care', href: '/blog?category=puppy' },
+  { name: 'Senior Dogs', href: '/blog?category=senior' },
+  { name: 'Dog Safety', href: '/blog?category=safety' }
+]
+
+const resourceLinks = [
+  { name: 'Dog Care Guides', href: '/blog?tag=care' },
+  { name: 'Training Resources', href: '/blog?tag=training' },
+  { name: 'Health Tips', href: '/blog?tag=health' },
+  { name: 'Breed Information', href: '/breeds' },
+  { name: 'Fun Facts', href: '/facts' },
+  { name: 'Nutrition Guides', href: '/blog?tag=nutrition' },
+  { name: 'Exercise Tips', href: '/blog?tag=exercise' },
+  { name: 'Grooming Guides', href: '/blog?tag=grooming' }
 ]
 
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
   { name: 'Security', href: '/security' },
+  { name: 'Disclaimer', href: '/terms#disclaimer' },
+  { name: 'Cookie Policy', href: '/privacy#cookies' }
+]
+
+const shopCategories = [
+  { name: 'Dog Food', href: '/shop?category=food' },
+  { name: 'Toys & Games', href: '/shop?category=toys' },
+  { name: 'Accessories', href: '/shop?category=accessories' },
+  { name: 'Grooming', href: '/shop?category=grooming' },
+  { name: 'Health & Wellness', href: '/shop?category=health' }
 ]
 
 export default function Footer() {
@@ -41,7 +69,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-gray-900 dark:text-white">PawPedia</span>
             </Link>
             <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
-              Your comprehensive guide to all things dogs. Discover breeds, care tips, and more.
+              Your comprehensive guide to understanding and caring for dogs. Discover breeds, expert advice, and essential tips for dog owners.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
@@ -62,6 +90,10 @@ export default function Footer() {
                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
               </a>
+            </div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              <p>Powered by <a href="https://dog.ceo/dog-api/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">The Dog API</a></p>
+              <p className="mt-2">Special thanks to the Dog API team for providing amazing dog images and breed information.</p>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-3 xl:mt-0">
@@ -93,9 +125,9 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Popular Sub-Breeds</h3>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Blog Categories</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {popularSubBreeds.map((item) => (
+                  {blogCategories.map((item) => (
                     <li key={item.name}>
                       <Link to={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                         {item.name}
@@ -105,52 +137,45 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Blog Categories</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <Link to="/blog/category/training" className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                      Training Tips
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/category/health" className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                      Health & Wellness
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/category/nutrition" className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                      Nutrition
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/category/lifestyle" className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                      Lifestyle
-                    </Link>
-                  </li>
-                </ul>
+                <div className="space-y-10">
+                  <div>
+                    <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Resources</h3>
+                    <ul role="list" className="mt-6 space-y-4">
+                      {resourceLinks.map((item) => (
+                        <li key={item.name}>
+                          <Link to={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Legal</h3>
+                    <ul role="list" className="mt-6 space-y-4">
+                      {legalLinks.map((item) => (
+                        <li key={item.name}>
+                          <Link to={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="lg:col-span-1">
-              <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Legal</h3>
-              <ul role="list" className="mt-6 space-y-4">
-                {legalLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.href}
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-900/10 dark:border-gray-700 pt-8">
-          <p className="text-xs leading-5 text-gray-500 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} PawPedia. Made with ❤️ for dog lovers.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <p className="text-xs leading-5 text-gray-500 dark:text-gray-400">
+              &copy; {new Date().getFullYear()} PawPedia. All rights reserved. Made with ❤️ for dog lovers everywhere.
+            </p>
+            <p className="text-xs leading-5 text-gray-500 dark:text-gray-400 md:text-right">
+              Images provided by <a href="https://dog.ceo/dog-api/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">Dog API</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -137,5 +137,42 @@ export const firebaseService = {
       console.error('Error getting all posts:', error);
       return [];
     }
+  },
+
+  async getShopProducts(category = 'all') {
+    try {
+      const productsRef = collection(db, 'shop_products');
+      let q = productsRef;
+      
+      if (category !== 'all') {
+        q = query(productsRef, where('category', '==', category));
+      }
+      
+      const snapshot = await getDocs(q);
+      const products = [];
+      
+      snapshot.forEach((doc) => {
+        products.push({ id: doc.id, ...doc.data() });
+      });
+      
+      return products.sort((a, b) => b.timestamp - a.timestamp);
+    } catch (error) {
+      console.error('Error getting shop products:', error);
+      return [];
+    }
+  },
+
+  async addShopProduct(product) {
+    try {
+      const productRef = doc(db, 'shop_products', product.id);
+      await setDoc(productRef, {
+        ...product,
+        timestamp: Date.now()
+      });
+      return true;
+    } catch (error) {
+      console.error('Error adding product:', error);
+      return false;
+    }
   }
 }; 

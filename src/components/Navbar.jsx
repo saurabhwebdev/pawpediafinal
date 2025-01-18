@@ -13,6 +13,7 @@ const navigation = [
   { name: 'Sub-Breeds', href: '/sub-breeds' },
   { name: 'Random Dog', href: '/random' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Shop', href: '/shop' },
   { name: 'Dog Facts', href: '/facts' }
 ]
 
