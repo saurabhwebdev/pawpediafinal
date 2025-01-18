@@ -34,13 +34,15 @@ async function generateSitemap() {
     // Get all blog posts (with error handling)
     let blogUrls = [];
     try {
-      const posts = await firebaseService.getCachedData('blog', 'posts') || [];
-      blogUrls = posts.map(post => ({
-        loc: `${SITE_URL}/blog/${post.slug}`,
-        changefreq: 'monthly',
-        priority: 0.6,
-        lastmod: post.timestamp ? new Date(post.timestamp).toISOString().split('T')[0] : undefined
-      }));
+      const postsData = await firebaseService.getCachedData('blog', 'posts');
+      if (postsData?.content?.posts && Array.isArray(postsData.content.posts)) {
+        blogUrls = postsData.content.posts.map(post => ({
+          loc: `${SITE_URL}/blog/${post.id.replace('post-', '')}`,
+          changefreq: 'monthly',
+          priority: 0.6,
+          lastmod: post.timestamp ? new Date(post.timestamp).toISOString().split('T')[0] : undefined
+        }));
+      }
     } catch (error) {
       console.warn('Warning: Could not fetch blog posts for sitemap:', error.message);
     }
@@ -48,12 +50,14 @@ async function generateSitemap() {
     // Get all dog facts (with error handling)
     let factUrls = [];
     try {
-      const facts = await firebaseService.getCachedData('facts', 'facts') || [];
-      factUrls = facts.map(fact => ({
-        loc: `${SITE_URL}/facts/${fact.id}`,
-        changefreq: 'monthly',
-        priority: 0.5
-      }));
+      const factsData = await firebaseService.getCachedData('facts', 'dog_facts');
+      if (factsData?.content && Array.isArray(factsData.content)) {
+        factUrls = factsData.content.map((fact, index) => ({
+          loc: `${SITE_URL}/facts/fact-${index + 1}`,
+          changefreq: 'monthly',
+          priority: 0.5
+        }));
+      }
     } catch (error) {
       console.warn('Warning: Could not fetch dog facts for sitemap:', error.message);
     }

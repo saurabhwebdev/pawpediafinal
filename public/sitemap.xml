@@ -1046,63 +1046,498 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-training-tips-a-step-by-step-guide-to-a-well-behaved-pup</loc>
+    <loc>https://pawpedia.com/blog/1</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-health-and-wellness</loc>
+    <loc>https://pawpedia.com/blog/2</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/understanding-dog-behavior</loc>
+    <loc>https://pawpedia.com/blog/3</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/ultimate-dog-nutrition-guide</loc>
+    <loc>https://pawpedia.com/blog/4</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-grooming-tips</loc>
+    <loc>https://pawpedia.com/blog/5</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-exercise-and-activities</loc>
+    <loc>https://pawpedia.com/blog/6</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-mental-stimulation-guide</loc>
+    <loc>https://pawpedia.com/blog/7</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-socialization-complete-guide</loc>
+    <loc>https://pawpedia.com/blog/8</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-first-aid-guide</loc>
+    <loc>https://pawpedia.com/blog/9</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-travel-tips</loc>
+    <loc>https://pawpedia.com/blog/10</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/11</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/12</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/13</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/14</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/15</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/16</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/17</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/18</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/19</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/20</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/21</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/22</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/23</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/24</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/25</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/26</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/27</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/28</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/29</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/30</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/31</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/32</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/33</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/34</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/35</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/36</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/37</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/38</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/39</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/40</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/41</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/42</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/43</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/44</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/45</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/46</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/47</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/48</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/49</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/blog/50</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-1</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-2</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-3</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-5</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-6</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-7</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-8</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-9</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-10</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-11</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-12</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-13</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-14</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-15</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-16</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-17</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-18</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-19</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-20</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-21</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-22</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-23</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-24</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-25</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-26</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-27</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-28</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-29</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-30</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-31</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-32</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-33</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-34</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-35</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-36</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-37</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-38</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pawpedia.com/facts/fact-39</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

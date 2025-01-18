@@ -49,7 +49,7 @@ function App() {
               <Route path="/facts" element={<DogFacts />} />
               <Route path="/facts/:factId" element={<DogFactDetails />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/security" element={<Security />} />

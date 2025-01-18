@@ -10,9 +10,13 @@
     "preview": "vite preview",
     "generate-images": "node scripts/generate-images.mjs",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "generate-blogs": "node scripts/generate-blogs.mjs",
+    "generate-facts": "node scripts/generate-facts.mjs",
+    "generate-content": "npm run generate-blogs && npm run generate-facts",
     "prebuild": "npm run generate-images && npm run generate-sitemap"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "axios": "^1.6.2",
@@ -21,7 +25,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^1.3.0",
-    "react-router-dom": "^6.19.0"
+    "react-markdown": "^9.0.3",
+    "react-router-dom": "^6.19.0",
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

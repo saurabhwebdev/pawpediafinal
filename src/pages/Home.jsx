@@ -9,12 +9,17 @@ import RandomDogGrid from '../components/RandomDogGrid'
 export default function Home() {
   const [randomImage, setRandomImage] = useState('')
   const [featuredBreeds, setFeaturedBreeds] = useState([])
-  const [featuredPosts, setFeaturedPosts] = useState([])
+  const [facts, setFacts] = useState([])
+  const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true)
+        setError(null)
+
         // Fetch random hero image
         const image = await dogApi.getRandomImage()
         setRandomImage(image)
@@ -32,17 +37,23 @@ export default function Home() {
         }
         setFeaturedBreeds(randomBreeds)
 
-        // Fetch featured blog posts
-        const posts = await firebaseService.getCachedData('blog', 'posts')
-        if (posts) {
-          // Get the 3 most recent posts
-          const recentPosts = posts
+        // Fetch facts
+        const factsData = await firebaseService.getCachedData('facts', 'dog_facts')
+        if (factsData?.content && Array.isArray(factsData.content)) {
+          setFacts(factsData.content.slice(0, 3)) // Get first 3 facts
+        }
+
+        // Fetch blog posts
+        const postsData = await firebaseService.getCachedData('blog', 'posts')
+        if (postsData?.content?.posts && Array.isArray(postsData.content.posts)) {
+          const sortedPosts = [...postsData.content.posts]
             .sort((a, b) => b.timestamp - a.timestamp)
-            .slice(0, 3)
-          setFeaturedPosts(recentPosts)
+            .slice(0, 3) // Get latest 3 posts
+          setPosts(sortedPosts)
         }
       } catch (error) {
         console.error('Error fetching data:', error)
+        setError('Error loading content')
       } finally {
         setLoading(false)
       }
@@ -355,66 +366,34 @@ export default function Home() {
           </motion.div>
 
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {featuredPosts.map((post, index) => (
-              <motion.article
-                key={post.slug}
+            {posts.map((post, index) => (
+              <motion.div
+                key={post.id}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="group relative flex flex-col bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden"
+                className="flex flex-col overflow-hidden rounded-lg shadow-lg"
               >
-                <div className="relative w-full overflow-hidden">
-                  <div className="aspect-[16/9]">
+                <Link to={`/blog/${post.id.replace('post-', '')}`}>
+                  <div className="flex-shrink-0">
                     <img
+                      className="h-48 w-full object-cover"
                       src={post.image}
-                      alt={post.imageAlt}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      alt={post.title}
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
-                </div>
-                
-                <div className="flex-1 flex flex-col justify-between p-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-x-4 text-xs mb-4">
-                      <time dateTime={new Date(post.timestamp).toISOString()} className="text-gray-500 dark:text-gray-400">
-                        {new Date(post.timestamp).toLocaleDateString()}
-                      </time>
-                      <div className="flex flex-wrap gap-2">
-                        {post.tags.slice(0, 2).map((tag) => (
-                          <span
-                            key={tag}
-                            className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
-                      <Link to={`/blog/${post.slug}`} className="hover:underline">
+                  <div className="flex flex-1 flex-col justify-between bg-white dark:bg-gray-700 p-6">
+                    <div className="flex-1">
+                      <p className="text-xl font-semibold text-gray-900 dark:text-white">
                         {post.title}
-                      </Link>
-                    </h3>
-                    <p className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300 line-clamp-3">
-                      {post.summary}
-                    </p>
+                      </p>
+                      <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
+                        {post.summary}
+                      </p>
+                    </div>
                   </div>
-                </div>
-
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                  className="absolute -top-4 -right-4 bg-white dark:bg-gray-700 rounded-full p-3 shadow-lg"
-                >
-                  <span role="img" aria-label="article" className="text-lg">
-                    📖
-                  </span>
-                </motion.div>
-              </motion.article>
+                </Link>
+              </motion.div>
             ))}
           </div>
 

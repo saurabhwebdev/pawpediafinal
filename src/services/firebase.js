@@ -47,7 +47,8 @@ if (typeof window !== 'undefined') {
   initializeAnalytics();
 }
 
-const db = getFirestore(app);
+// Initialize Firestore
+export const db = getFirestore(app);
 
 // Cache expiration time (24 hours)
 const CACHE_EXPIRATION = 24 * 60 * 60 * 1000;
@@ -69,11 +70,8 @@ export const firebaseService = {
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
-        const data = docSnap.data();
-        // Check if cache is expired
-        if (data.timestamp && Date.now() - data.timestamp < CACHE_EXPIRATION) {
-          return data.content;
-        }
+        // Return the entire document data
+        return docSnap.data();
       }
       return null;
     } catch (error) {
@@ -81,13 +79,11 @@ export const firebaseService = {
     }
   },
 
-  async setCachedData(collection_name, doc_id, content) {
+  async setCachedData(collection_name, doc_id, data) {
     try {
       const docRef = doc(db, collection_name, doc_id);
-      await setDoc(docRef, {
-        content,
-        timestamp: Date.now()
-      });
+      // Save data exactly as provided
+      await setDoc(docRef, data);
       return true;
     } catch (error) {
       return handleFirestoreError(error, 'setting cached data');
@@ -120,5 +116,26 @@ export const firebaseService = {
 
   async setCachedFactDetails(factId, details) {
     return this.setCachedData('fact_details', factId, details);
+  },
+
+  async getAllPosts() {
+    try {
+      const postsRef = collection(db, 'blog_details');
+      const querySnapshot = await getDocs(postsRef);
+      
+      const posts = [];
+      querySnapshot.forEach((doc) => {
+        // Each document has a content property containing the post data
+        const postData = doc.data()?.content;
+        if (postData) {
+          posts.push(postData);
+        }
+      });
+      
+      return posts;
+    } catch (error) {
+      console.error('Error getting all posts:', error);
+      return [];
+    }
   }
 }; 

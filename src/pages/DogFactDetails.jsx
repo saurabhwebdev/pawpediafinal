@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { geminiService } from '../services/geminiAI';
 import { firebaseService } from '../services/firebase';
 
 export default function DogFactDetails() {
@@ -10,28 +9,42 @@ export default function DogFactDetails() {
   const [fact, setFact] = useState(null);
   const [details, setDetails] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchFactDetails = async () => {
       try {
-        // Try to get from cache first
-        let cachedDetails = await firebaseService.getCachedFactDetails(factId);
+        setLoading(true);
+        setError(null);
+        const decodedFact = decodeURIComponent(factId);
+
+        // Get all facts to find the index
+        const allFacts = await firebaseService.getCachedData('facts', 'dog_facts');
+        let factIndex = -1;
         
-        if (!cachedDetails) {
-          // If not in cache, generate new details
-          const decodedFact = decodeURIComponent(factId);
-          cachedDetails = await geminiService.generateDogFactDetails(decodedFact);
-          
-          // Cache the details if generated successfully
-          if (cachedDetails) {
-            await firebaseService.setCachedFactDetails(factId, cachedDetails);
-          }
+        if (allFacts?.content && Array.isArray(allFacts.content)) {
+          factIndex = allFacts.content.findIndex(f => f === decodedFact);
         }
 
-        setFact(decodeURIComponent(factId));
-        setDetails(cachedDetails);
+        if (factIndex === -1) {
+          setError('Fact not found');
+          return;
+        }
+
+        // Get the fact details using the correct ID format
+        const factDetailsId = `fact-${factIndex + 1}`;
+        const factDetails = await firebaseService.getCachedData('fact_details', factDetailsId);
+
+        if (!factDetails?.content) {
+          setError('Fact details not found');
+          return;
+        }
+
+        setFact(decodedFact);
+        setDetails(factDetails.content);
       } catch (error) {
         console.error('Error fetching fact details:', error);
+        setError('Error loading fact details');
       } finally {
         setLoading(false);
       }
@@ -48,12 +61,13 @@ export default function DogFactDetails() {
     );
   }
 
-  if (!details) {
+  if (error || !details) {
     return (
       <div className="min-h-screen bg-white dark:bg-gray-800 px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Fact Not Found</h1>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">Sorry, we couldn't find the details for this fact.</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+            {error || 'Fact Not Found'}
+          </h1>
           <Link
             to="/facts"
             className="mt-8 inline-block rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 dark:bg-indigo-500 dark:hover:bg-indigo-400"

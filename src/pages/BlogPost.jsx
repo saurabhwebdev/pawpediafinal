@@ -8,27 +8,40 @@ import remarkGfm from 'remark-gfm';
 import { ArrowLeftIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline';
 
 export default function BlogPost() {
-  const { slug } = useParams();
+  const { id } = useParams();
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const posts = await firebaseService.getCachedData('blog', 'posts');
-        if (posts) {
-          const foundPost = posts.find(p => p.slug === slug);
-          setPost(foundPost);
+        setLoading(true);
+        setError(null);
+
+        if (!id) {
+          setError('No post ID provided');
+          return;
+        }
+
+        const postData = await firebaseService.getCachedData('blog_details', `post-${id}`);
+        console.log('Fetched post:', postData);
+
+        if (postData?.content) {
+          setPost(postData.content);
+        } else {
+          setError('Blog post not found');
         }
       } catch (error) {
-        console.error('Error fetching blog post:', error);
+        console.error('Error fetching post:', error);
+        setError('Error loading post');
       } finally {
         setLoading(false);
       }
     };
 
     fetchPost();
-  }, [slug]);
+  }, [id]);
 
   if (loading) {
     return (

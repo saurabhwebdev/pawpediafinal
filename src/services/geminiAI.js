@@ -4,38 +4,53 @@ const genAI = new GoogleGenerativeAI("AIzaSyCkbXUlRUe4mQiEjEUgOyAxRAkaN4gm9hM");
 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 // Helper function to extract and clean JSON from response
-const extractJsonFromResponse = (text) => {
+function extractJsonFromResponse(text) {
   try {
-    // Remove any markdown formatting and get everything between the first { and last }
-    const jsonStart = text.indexOf('{');
-    const jsonEnd = text.lastIndexOf('}');
-    
-    if (jsonStart === -1 || jsonEnd === -1) {
-      console.error('No valid JSON object found in response');
-      return null;
-    }
+    // Debug the input
+    console.log('Raw text received:', text);
 
-    let jsonText = text.slice(jsonStart, jsonEnd + 1);
-
-    // Basic cleanup of common issues
-    jsonText = jsonText
-      .replace(/\n\s*/g, ' ') // Replace newlines and following spaces with a single space
-      .replace(/,\s*]/g, ']') // Remove trailing commas in arrays
-      .replace(/,\s*}/g, '}') // Remove trailing commas in objects
-      .replace(/\\/g, '\\\\') // Escape backslashes
-      .replace(/(?<!\\)"/g, '\\"') // Escape unescaped quotes
-      .replace(/\\"/g, '"') // Fix double-escaped quotes
+    // Basic cleanup first
+    let cleanText = text
+      // Remove anything before the first {
+      .replace(/^[\s\S]*?({[\s\S]*})[\s\S]*$/, '$1')
+      // Remove control characters and normalize whitespace
+      .replace(/[\x00-\x1F\x7F-\x9F]/g, '')
+      .replace(/\r?\n/g, ' ')
+      .replace(/\s+/g, ' ')
+      // Remove markdown markers
+      .replace(/```json/g, '')
+      .replace(/```/g, '')
       .trim();
 
-    // Parse the cleaned JSON
-    return JSON.parse(jsonText);
+    // Try direct parse first
+    try {
+      return JSON.parse(cleanText);
+    } catch (e) {
+      console.log('Direct parse failed:', e.message);
+    }
+
+    // More aggressive cleaning
+    cleanText = cleanText
+      // Fix common JSON issues
+      .replace(/,(\s*[}\]])/g, '$1')  // Remove trailing commas
+      .replace(/([^\\])\\([^"\\])/g, '$1\\\\$2')  // Fix single backslashes
+      .replace(/\\'/g, "'")  // Remove escaped single quotes
+      .replace(/\t/g, ' ')   // Replace tabs with spaces
+      .trim();
+
+    console.log('Cleaned JSON:', cleanText);
+
+    try {
+      return JSON.parse(cleanText);
+    } catch (error) {
+      console.error('Final parse attempt failed:', error);
+      throw error;
+    }
   } catch (error) {
-    console.error('Error parsing JSON:', error);
-    console.error('Original text:', text);
-    console.error('Cleaned JSON text:', jsonText);
-    return null;
+    console.error('Error extracting JSON:', error);
+    throw error;
   }
-};
+}
 
 // Helper function to retry failed requests
 const retryOperation = async (operation, maxRetries = 3) => {
@@ -132,38 +147,68 @@ export const geminiService = {
 
   async generateBlogPost(topic) {
     const operation = async () => {
-      const prompt = `Generate a valid JSON object for a blog post about ${topic} with this structure (no additional text or formatting):
+      const prompt = `Create a blog post about ${topic}. Return a JSON object in this exact format, with no additional text or formatting:
+
 {
-  "title": "An SEO-friendly title",
-  "slug": "url-friendly-version-of-title",
-  "summary": "A brief 2-3 sentence summary",
-  "content": "The full blog post content",
-  "tags": ["5-7 relevant tags"],
-  "imageAlt": "Descriptive alt text for the featured image",
-  "metaDescription": "SEO-friendly meta description",
+  "title": "A clear, SEO-friendly title",
+  "slug": "lowercase-url-friendly-title",
+  "summary": "2-3 sentences summarizing the post",
+  "content": "Main content of the post. Use simple text only, no special formatting.",
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "imageAlt": "Brief image description",
+  "metaDescription": "SEO meta description",
   "sections": [
     {
-      "title": "Section title",
-      "content": "Section content"
+      "title": "First Section",
+      "content": "Section content here"
     }
   ],
   "author": {
     "name": "PawPedia Team",
     "bio": "Expert in dog care and training"
   },
-  "readingTime": "Estimated reading time in minutes"
-}`;
+  "readingTime": "5"
+}
 
-      const result = await model.generateContent(prompt);
-      const text = result.response.text();
-      return extractJsonFromResponse(text);
+Important: Return ONLY the JSON object, no other text. Ensure all content is properly escaped.`;
+
+      try {
+        const result = await model.generateContent({
+          contents: [{ role: 'user', parts: [{ text: prompt }] }],
+          generationConfig: {
+            temperature: 0.7,
+            topK: 40,
+            topP: 0.8,
+            maxOutputTokens: 2048,
+          },
+        });
+
+        const text = result.response.text();
+        const blogPost = extractJsonFromResponse(text);
+        
+        // Validate the blog post structure
+        if (!blogPost || typeof blogPost !== 'object') {
+          throw new Error('Invalid blog post: not an object');
+        }
+
+        const requiredFields = ['title', 'content', 'tags', 'summary', 'slug'];
+        for (const field of requiredFields) {
+          if (!blogPost[field]) {
+            throw new Error(`Invalid blog post: missing ${field}`);
+          }
+        }
+
+        if (!Array.isArray(blogPost.tags)) {
+          throw new Error('Invalid blog post: tags must be an array');
+        }
+
+        return blogPost;
+      } catch (error) {
+        console.error('Error in blog post generation:', error);
+        throw error;
+      }
     };
 
-    try {
-      return await retryOperation(operation);
-    } catch (error) {
-      console.error('Error generating blog post:', error);
-      return null;
-    }
+    return await retryOperation(operation);
   }
 }; 
