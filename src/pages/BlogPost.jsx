@@ -24,7 +24,7 @@ export default function BlogPost() {
           return;
         }
 
-        const postData = await firebaseService.getCachedData('blog_details', `post-${id}`);
+        const postData = await firebaseService.getCachedData('blog_details', id);
         console.log('Fetched post:', postData);
 
         if (postData?.content) {

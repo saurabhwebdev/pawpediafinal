@@ -45,10 +45,10 @@ async function generateSitemap() {
     // Get blog posts
     const blogPosts = await firebaseService.getCachedData('blog', 'posts');
     const blogUrls = blogPosts?.content?.posts?.map(post => ({
-      url: `blog/${post.id}`,
+      url: `blog/${post.slug}`,
       priority: '0.6',
       changefreq: 'monthly',
-      lastmod: new Date().toISOString().split('T')[0]
+      lastmod: new Date(post.timestamp).toISOString().split('T')[0]
     })) || [];
 
     // Get facts
