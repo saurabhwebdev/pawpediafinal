@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import { firebaseService } from '../services/firebase';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ArrowLeftIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ClockIcon, TagIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/outline';
 
 export default function BlogPost() {
   const { id } = useParams();
@@ -145,21 +146,36 @@ export default function BlogPost() {
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
-                h1: ({ children }) => (
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mt-16 first:mt-0">
-                    {children}
-                  </h1>
-                ),
-                h2: ({ children }) => (
-                  <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-12 first:mt-0">
-                    {children}
-                  </h2>
-                ),
-                h3: ({ children }) => (
-                  <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mt-8">
-                    {children}
-                  </h3>
-                ),
+                h1: ({ children }) => {
+                  if (typeof children === 'string' && children.toLowerCase().trim() === 'introduction') {
+                    return null;
+                  }
+                  return (
+                    <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mt-16 first:mt-0">
+                      {children}
+                    </h1>
+                  );
+                },
+                h2: ({ children }) => {
+                  if (typeof children === 'string' && children.toLowerCase().trim() === 'introduction') {
+                    return null;
+                  }
+                  return (
+                    <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-12 first:mt-0">
+                      {children}
+                    </h2>
+                  );
+                },
+                h3: ({ children }) => {
+                  if (typeof children === 'string' && children.toLowerCase().trim() === 'introduction') {
+                    return null;
+                  }
+                  return (
+                    <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mt-8">
+                      {children}
+                    </h3>
+                  );
+                },
                 p: ({ children }) => (
                   <p className="mt-6 text-base leading-7 text-gray-600 dark:text-gray-300">
                     {children}
@@ -198,9 +214,29 @@ export default function BlogPost() {
                 ),
               }}
             >
-              {post.content.replace(/\\n/g, '\n')}
+              {post.content.replace(/\\n/g, '\n').replace(/^###\s*introduction\s*$/im, '')}
             </ReactMarkdown>
           </motion.div>
+
+          {/* Subtle Product Links */}
+          {post.productRecommendations && post.productRecommendations.length > 0 && (
+            <div className="mt-8 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
+              <div className="flex flex-col space-y-2">
+                {post.productRecommendations.map((product, index) => (
+                  <a
+                    key={index}
+                    href={product.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"
+                  >
+                    <span className="truncate flex-1">{product.title}</span>
+                    <span className="ml-2 text-gray-400">↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Author Section */}
           {post.author && (

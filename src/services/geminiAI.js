@@ -9,42 +9,58 @@ function extractJsonFromResponse(text) {
     // Debug the input
     console.log('Raw text received:', text);
 
-    // Basic cleanup first
-    let cleanText = text
-      // Remove anything before the first {
-      .replace(/^[\s\S]*?({[\s\S]*})[\s\S]*$/, '$1')
-      // Remove control characters and normalize whitespace
-      .replace(/[\x00-\x1F\x7F-\x9F]/g, '')
-      .replace(/\r?\n/g, ' ')
+    // Remove markdown code block markers
+    text = text.replace(/```JSON\s*/g, '').replace(/```\s*$/g, '');
+
+    // Find the first { and last } to extract just the JSON object
+    const start = text.indexOf('{');
+    const end = text.lastIndexOf('}') + 1;
+    
+    if (start === -1 || end === 0) {
+      throw new Error('No JSON object found in response');
+    }
+
+    let jsonText = text.slice(start, end);
+
+    // Basic cleanup
+    jsonText = jsonText
+      .replace(/\n/g, ' ')
+      .replace(/\r/g, '')
+      .replace(/\t/g, ' ')
       .replace(/\s+/g, ' ')
-      // Remove markdown markers
-      .replace(/```json/g, '')
+      // Remove any remaining markdown or code block markers
+      .replace(/```[a-zA-Z]*\s*/g, '')
       .replace(/```/g, '')
       .trim();
 
-    // Try direct parse first
+    // Try to parse
     try {
-      return JSON.parse(cleanText);
+      return JSON.parse(jsonText);
     } catch (e) {
-      console.log('Direct parse failed:', e.message);
-    }
-
-    // More aggressive cleaning
-    cleanText = cleanText
+      console.log('Initial parse failed, trying additional cleanup...', e.message);
+      
+      // More aggressive cleanup
+      jsonText = jsonText
+        // Fix escaped quotes
+        .replace(/\\"/g, '"')
+        .replace(/"\s+"/g, '","')
       // Fix common JSON issues
-      .replace(/,(\s*[}\]])/g, '$1')  // Remove trailing commas
-      .replace(/([^\\])\\([^"\\])/g, '$1\\\\$2')  // Fix single backslashes
-      .replace(/\\'/g, "'")  // Remove escaped single quotes
-      .replace(/\t/g, ' ')   // Replace tabs with spaces
+        .replace(/,\s*}/g, '}')
+        .replace(/,\s*]/g, ']')
+        // Remove trailing commas in arrays
+        .replace(/,(\s*[\]}])/g, '$1')
+        // Ensure proper quotes around property names
+        .replace(/(['"])?([a-zA-Z0-9_]+)(['"])?\s*:/g, '"$2":')
+        // Fix double quotes
+        .replace(/""+/g, '"')
+        // Remove any remaining special characters
+        .replace(/[^\x20-\x7E]/g, '')
       .trim();
 
-    console.log('Cleaned JSON:', cleanText);
+      console.log('Cleaned JSON:', jsonText);
 
-    try {
-      return JSON.parse(cleanText);
-    } catch (error) {
-      console.error('Final parse attempt failed:', error);
-      throw error;
+      // Try parsing again
+      return JSON.parse(jsonText);
     }
   } catch (error) {
     console.error('Error extracting JSON:', error);
@@ -145,36 +161,126 @@ export const geminiService = {
     }
   },
 
-  async generateBlogPost(topic) {
+  async generateBlogPost(topic, products = []) {
     const operation = async () => {
-      const prompt = `Create a blog post about ${topic}. Return a JSON object in this exact format, with no additional text or formatting:
+      // Simplify product formatting
+      const formattedProducts = products.map(p => ({
+        title: p.title || '',
+        price: String(p.price || ''),
+        rating: String(p.rating || ''),
+        reviews: String(p.reviews || '0'),
+        link: p.link || '',
+      }));
 
+      // Create product markdown links for content
+      const productLinks = formattedProducts.map(p => 
+        `[${p.title}](${p.link})`
+      );
+
+      // Modify topic if it's future-oriented
+      const currentYear = new Date().getFullYear();
+      const modifiedTopic = topic.replace(/\b\d{4}\b/g, match => {
+        const year = parseInt(match);
+        if (year > currentYear) {
+          return `${currentYear} and Trends`;
+        }
+        return match;
+      });
+
+      // First, get research and statistics
+      const researchPrompt = `Research current statistics, studies, and expert insights about: "${modifiedTopic}"
+Focus on current trends and data-backed projections. Return a JSON object with:
 {
-  "title": "A clear, SEO-friendly title",
-  "slug": "lowercase-url-friendly-title",
-  "summary": "2-3 sentences summarizing the post",
-  "content": "Main content of the post. Use simple text only, no special formatting.",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
-  "imageAlt": "Brief image description",
-  "metaDescription": "SEO meta description",
-  "sections": [
-    {
-      "title": "First Section",
-      "content": "Section content here"
-    }
-  ],
-  "author": {
-    "name": "PawPedia Team",
-    "bio": "Expert in dog care and training"
-  },
-  "readingTime": "5"
-}
+  "key_statistics": ["3-5 current statistics with sources"],
+  "research_findings": ["3-5 findings from recent studies"],
+  "expert_insights": ["2-3 expert opinions or recommendations"],
+  "sources": ["List of scientific papers, journals, or reputable sources"]
+}`;
 
-Important: Return ONLY the JSON object, no other text. Ensure all content is properly escaped.`;
+      let researchData;
+      try {
+        const researchResult = await model.generateContent({
+          contents: [{ role: 'user', parts: [{ text: researchPrompt }] }],
+          generationConfig: {
+            temperature: 0.3,
+            topK: 20,
+            topP: 0.8,
+            maxOutputTokens: 1024,
+          },
+        });
+
+        researchData = extractJsonFromResponse(researchResult.response.text());
+        if (!researchData) {
+          researchData = {
+            key_statistics: ["According to the American Kennel Club's latest data..."],
+            research_findings: ["Recent studies show evolving trends in dog breed popularity..."],
+            expert_insights: ["Veterinarians and breed experts suggest considering factors like lifestyle fit..."],
+            sources: ["American Kennel Club (AKC)", "Veterinary Medicine International"]
+          };
+        }
+      } catch (error) {
+        console.warn('Research data generation failed, using fallback data');
+        researchData = {
+          key_statistics: ["According to the American Kennel Club's latest data..."],
+          research_findings: ["Recent studies show evolving trends in dog breed popularity..."],
+          expert_insights: ["Veterinarians and breed experts suggest considering factors like lifestyle fit..."],
+          sources: ["American Kennel Club (AKC)", "Veterinary Medicine International"]
+        };
+      }
+
+      // Main content generation with research incorporation
+      const contentPrompt = `Write a comprehensive, high-quality blog post about "${modifiedTopic}". 
+
+REQUIREMENTS:
+- Length: STRICTLY MINIMUM 400 words
+- Each section should be at least 100 words
+- Style: Professional, informative, and engaging
+- Tone: Expert but accessible
+- Focus: Current trends and data-backed insights
+- Format: Well-structured with clear sections
+- Citations: Include research citations in (Author, Year) format
+
+INCORPORATE THIS RESEARCH:
+${JSON.stringify(researchData, null, 2)}
+
+PRODUCT RECOMMENDATIONS:
+Include these products as clickable links where naturally relevant:
+${formattedProducts.map(p => `- ${productLinks[formattedProducts.indexOf(p)]} (₹${p.price} - ${p.rating} stars, ${p.reviews} reviews)`).join('\n')}
+
+DETAILED STRUCTURE:
+1. Introduction (100+ words):
+   - Hook readers with compelling statistics
+   - Set context and importance
+   - Preview main points
+
+2. Current Trends and Analysis (100+ words):
+   - Detailed analysis of current statistics
+   - Expert insights and interpretations
+   - Market trends and patterns
+
+3. Practical Insights (100+ words):
+   - Key considerations
+   - Expert recommendations
+   - Product suggestions where relevant
+
+4. Conclusion (100+ words):
+   - Key takeaways
+   - Final recommendations
+   - Call to action
+
+IMPORTANT:
+- Ensure MINIMUM 400 words total length
+- Focus on current trends and data-backed projections
+- Use exact [Product Name](Product URL) format for product links
+- Support claims with research citations
+- Maintain professional tone throughout
+- Focus on providing valuable, actionable information
+- Include relevant statistics and expert quotes`;
 
       try {
-        const result = await model.generateContent({
-          contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        // Generate the main content with increased token limit
+        const contentResult = await model.generateContent({
+          contents: [{ role: 'user', parts: [{ text: contentPrompt }] }],
           generationConfig: {
             temperature: 0.7,
             topK: 40,
@@ -183,28 +289,222 @@ Important: Return ONLY the JSON object, no other text. Ensure all content is pro
           },
         });
 
-        const text = result.response.text();
-        const blogPost = extractJsonFromResponse(text);
-        
-        // Validate the blog post structure
-        if (!blogPost || typeof blogPost !== 'object') {
-          throw new Error('Invalid blog post: not an object');
+        // Use let instead of const for contentText since we might need to reassign it
+        let contentText = contentResult.response.text();
+        if (!contentText || contentText.includes("I cannot provide information about future events")) {
+          throw new Error('Invalid content generated');
         }
 
-        const requiredFields = ['title', 'content', 'tags', 'summary', 'slug'];
-        for (const field of requiredFields) {
-          if (!blogPost[field]) {
-            throw new Error(`Invalid blog post: missing ${field}`);
+        // Check word count early
+        const initialWordCount = contentText.split(/\s+/).length;
+        if (initialWordCount < 400) {
+          // If too short, try again with more emphasis on length
+          const retryPrompt = `${contentPrompt}\n\nIMPORTANT: The previous response was too short at ${initialWordCount} words. Please ensure the content is AT LEAST 400 words by providing more detailed explanations, examples, and analysis in each section.`;
+          
+          const retryResult = await model.generateContent({
+            contents: [{ role: 'user', parts: [{ text: retryPrompt }] }],
+            generationConfig: {
+              temperature: 0.7,
+              topK: 40,
+              topP: 0.8,
+              maxOutputTokens: 2048,
+            },
+          });
+          
+          const retryText = retryResult.response.text();
+          if (!retryText || retryText.includes("I cannot provide information about future events")) {
+            throw new Error('Invalid content generated on retry');
           }
+          contentText = retryText;
         }
+        
+        // Structure the content
+        const structurePrompt = `Given this blog post content, create a structured JSON object.
+Format the response as a clean JSON object without any markdown code blocks or extra text.
+The JSON should have this exact structure:
 
-        if (!Array.isArray(blogPost.tags)) {
-          throw new Error('Invalid blog post: tags must be an array');
+{
+  "title": "The exact title from the content",
+  "summary": "A brief summary of the content (first paragraph)",
+  "content": "The complete blog post content with all formatting preserved",
+  "tags": ["breed-specific", "dog-care", "pet-products"],
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "Introduction content here"
+    },
+    {
+      "title": "Current Trends and Analysis",
+      "content": "Trends content here"
+    },
+    {
+      "title": "Practical Insights",
+      "content": "Insights content here"
+    },
+    {
+      "title": "Conclusion",
+      "content": "Conclusion content here"
+    }
+  ],
+  "references": ["List of research citations"],
+  "word_count": 400
+}`;
+
+        try {
+          // Generate the structure with strict parameters
+          const structureResult = await model.generateContent({
+            contents: [
+              { role: 'user', parts: [{ text: contentText }] },
+              { role: 'user', parts: [{ text: structurePrompt }] }
+            ],
+            generationConfig: {
+              temperature: 0.1,
+              topK: 1,
+              topP: 0.1,
+              maxOutputTokens: 4096,
+            },
+          });
+
+          const structureText = structureResult.response.text();
+          console.log('Structure response:', structureText);
+
+          // Extract JSON more carefully
+          let jsonText = structureText;
+          
+          // Remove any markdown code block markers and surrounding text
+          jsonText = jsonText.replace(/```json\s*/gi, '').replace(/```\s*$/g, '');
+          
+          // Find the actual JSON object
+          const startIndex = jsonText.indexOf('{');
+          const endIndex = jsonText.lastIndexOf('}') + 1;
+          
+          if (startIndex === -1 || endIndex <= startIndex) {
+            throw new Error('No valid JSON object found in response');
+          }
+          
+          jsonText = jsonText.slice(startIndex, endIndex);
+
+          // Clean up the JSON text
+          jsonText = jsonText
+            .replace(/\n/g, ' ')
+            .replace(/\r/g, '')
+            .replace(/\t/g, ' ')
+            .replace(/\s+/g, ' ')
+            .replace(/\\"/g, '"')
+            .replace(/"\s+"/g, '","')
+            .replace(/,\s*([}\]])/g, '$1')
+            .replace(/([{,])\s*"(\w+)":/g, '$1"$2":')
+            .trim();
+
+          let blogPost;
+          try {
+            blogPost = JSON.parse(jsonText);
+          } catch (parseError) {
+            console.error('JSON parse error:', parseError);
+            // Create a basic structure from the content
+            const lines = contentText.split('\n');
+            const sections = [];
+            let currentSection = null;
+
+            lines.forEach(line => {
+              if (line.startsWith('#')) {
+                if (currentSection) {
+                  sections.push(currentSection);
+                }
+                currentSection = {
+                  title: line.replace(/^#+\s*/, '').trim(),
+                  content: ''
+                };
+              } else if (currentSection) {
+                currentSection.content += line + '\n';
+              }
+            });
+
+            if (currentSection) {
+              sections.push(currentSection);
+            }
+
+            blogPost = {
+              title: modifiedTopic,
+              summary: lines.slice(1, 3).join(' ').trim(),
+              content: contentText,
+              tags: ['dog-breeds', 'pet-care', 'dog-training'],
+              sections: sections,
+              references: [],
+              word_count: contentText.split(/\s+/).length
+            };
+          }
+
+          // Validate and clean up the blog post structure
+          if (!blogPost || typeof blogPost !== 'object') {
+            throw new Error('Invalid blog structure generated');
+          }
+
+          // Ensure all required fields exist with defaults
+          const defaults = {
+            title: modifiedTopic,
+            summary: '',
+            content: contentText,
+            tags: ['dog-care'],
+            sections: [],
+            references: [],
+            word_count: contentText.split(/\s+/).length
+          };
+
+          blogPost = { ...defaults, ...blogPost };
+
+          // Ensure arrays are arrays
+          ['tags', 'sections', 'references'].forEach(field => {
+            if (!Array.isArray(blogPost[field])) {
+              blogPost[field] = defaults[field];
+            }
+          });
+
+          // If no sections were parsed, create them from the content
+          if (blogPost.sections.length === 0) {
+            const contentParts = contentText.split(/(?=^#+ )/m);
+            blogPost.sections = contentParts.map(part => {
+              const lines = part.trim().split('\n');
+              return {
+                title: lines[0].replace(/^#+\s*/, '').trim(),
+                content: lines.slice(1).join('\n').trim()
+              };
+            }).filter(section => section.title && section.content);
+          }
+
+          // Build the final blog post
+          return {
+            title: blogPost.title,
+            slug: blogPost.title
+              .toLowerCase()
+              .replace(/[^\w\s-]/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-')
+              .trim(),
+            summary: blogPost.summary,
+            content: contentText,
+            tags: blogPost.tags,
+            imageAlt: `Blog post about ${modifiedTopic}`,
+            metaDescription: blogPost.summary,
+            sections: blogPost.sections,
+            author: {
+              name: "PawPedia Team",
+              bio: "Expert in dog care and training"
+            },
+            readingTime: `${Math.ceil(blogPost.word_count / 200)} min read`,
+            wordCount: blogPost.word_count,
+            references: blogPost.references,
+            productRecommendations: formattedProducts.map(p => ({
+              ...p,
+              context: `Recommended product for ${modifiedTopic.toLowerCase()}`
+            }))
+          };
+        } catch (error) {
+          console.error('Error in structure generation:', error);
+          throw error;
         }
-
-        return blogPost;
       } catch (error) {
-        console.error('Error in blog post generation:', error);
+        console.error('Error generating blog post:', error);
         throw error;
       }
     };

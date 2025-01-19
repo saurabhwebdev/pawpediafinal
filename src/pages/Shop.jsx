@@ -72,7 +72,10 @@ export default function Shop() {
     .slice(0, 4);
 
   const featuredProducts = filteredProducts
-    .filter(product => product.rating >= 4.5)
+    .filter(product => {
+      const productData = product.content || product;
+      return parseFloat(productData.rating) >= 4.0 && parseInt(productData.reviews) > 0;
+    })
     .slice(0, 4);
 
   return (
@@ -124,17 +127,19 @@ export default function Shop() {
           </div>
 
           {/* Featured Products */}
-          <section className="mb-16">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Featured Products</h2>
-              <span className="text-sm text-indigo-600 dark:text-indigo-400">Top rated items</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {featuredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} featured />
-              ))}
-            </div>
-          </section>
+          {featuredProducts.length > 0 && (
+            <section className="mb-16">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Featured Products</h2>
+                <span className="text-sm text-indigo-600 dark:text-indigo-400">Top rated items</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {featuredProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} featured />
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Best Sellers Section */}
           <section className="mb-16">
@@ -208,25 +213,37 @@ export default function Shop() {
 }
 
 function ProductCard({ product, featured }) {
+  // Extract product data from content wrapper if it exists
+  const productData = product.content || product;
+  
+  // Format price to handle undefined or invalid values
+  const formattedPrice = productData.price ? `₹${productData.price}` : 'Price not available';
+  
+  // Default rating to 0 if undefined
+  const rating = parseFloat(productData.rating) || 0;
+  
+  // Default reviews count to 0 if undefined
+  const reviewCount = parseInt(productData.reviews) || 0;
+  
+  // Default stock status
+  const inStock = productData.inStock ?? true;
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="group relative bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden"
-    >
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+    <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden">
+      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 dark:bg-gray-600">
         <img
-          src={product.image}
-          alt={product.title}
+          src={productData.image || '/placeholder-product.jpg'}
+          alt={productData.title}
           className="h-48 w-full object-cover object-center group-hover:opacity-75"
           onError={(e) => {
+            e.target.onerror = null;
             e.target.src = '/placeholder-product.jpg';
           }}
         />
       </div>
       <div className="p-4">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-white">
-          {product.title}
+        <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-2 line-clamp-2 min-h-[2.5rem]">
+          {productData.title}
         </h3>
         <div className="mt-2 flex items-center">
           <div className="flex items-center">
@@ -234,42 +251,44 @@ function ProductCard({ product, featured }) {
               <StarIcon
                 key={i}
                 className={`h-4 w-4 ${
-                  i < product.rating 
+                  i < rating 
                     ? 'text-yellow-400 fill-current' 
-                    : 'text-gray-300'
+                    : 'text-gray-300 dark:text-gray-500'
                 }`}
               />
             ))}
           </div>
-          <span className="ml-2 text-sm text-gray-500">
-            ({product.reviews})
+          <span className="ml-2 text-sm text-gray-500 dark:text-gray-400">
+            {reviewCount > 0 ? `(${reviewCount})` : '(No reviews yet)'}
           </span>
         </div>
-        <p className="mt-1 text-lg font-medium text-gray-900 dark:text-white">
-          ₹{product.price}
+        <p className="mt-2 text-lg font-medium text-gray-900 dark:text-white">
+          {formattedPrice}
         </p>
-        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
-          {product.description}
+        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 line-clamp-2 min-h-[2.5rem]">
+          {productData.description || 'No description available'}
         </p>
         <div className="mt-4 flex items-center justify-between">
           <span className={`text-sm ${
-            product.inStock 
+            inStock 
               ? 'text-green-600 dark:text-green-400' 
               : 'text-red-600 dark:text-red-400'
           }`}>
-            {product.inStock ? 'In Stock' : 'Out of Stock'}
+            {inStock ? 'In Stock' : 'Out of Stock'}
           </span>
-          <a
-            href={product.affiliateLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md"
-          >
-            Buy on Amazon
-            <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4" />
-          </a>
+          {productData.affiliateLink && (
+            <a
+              href={productData.affiliateLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded-md transition-colors duration-200"
+            >
+              View on Amazon
+              <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4" />
+            </a>
+          )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 } 

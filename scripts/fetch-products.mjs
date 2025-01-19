@@ -155,22 +155,109 @@ async function saveProductsToFile(products, filename) {
   console.log(`Saved ${products.length} products to ${filename}`);
 }
 
+function validateProduct(product) {
+  const required = ['id', 'title', 'price', 'image', 'category', 'description'];
+  const missing = required.filter(field => !product[field]);
+  
+  if (missing.length > 0) {
+    throw new Error(`Missing required fields: ${missing.join(', ')}`);
+  }
+  
+  // Validate data types
+  if (typeof product.price !== 'string' || !/^\d+$/.test(product.price)) {
+    throw new Error('Price must be a string of digits');
+  }
+  
+  if (!['food', 'toys', 'accessories', 'grooming', 'health'].includes(product.category)) {
+    throw new Error('Invalid category');
+  }
+  
+  return true;
+}
+
 async function saveProductsToFirebase(products) {
   let successCount = 0;
+  const errors = [];
   
+  console.log(`\nSaving ${products.length} products to Firebase...`);
+  
+  // First, save each product individually
   for (const product of products) {
     try {
-      await firebaseService.addShopProduct(product);
+      // Save individual product
+      await firebaseService.setCachedData('shop_products', product.id, {
+        content: product,
+        timestamp: Date.now()
+      });
+      
       successCount++;
-      console.log(`Saved product: ${product.title}`);
+      console.log(`✓ Saved product: ${product.title}`);
     } catch (error) {
-      console.error(`Failed to save product: ${product.title}`, error);
+      errors.push({ product: product.title, error: error.message });
+      console.error(`✗ Failed to save product: ${product.title}`);
+      console.error(`  Error: ${error.message}`);
     }
   }
 
-  console.log(`Successfully saved ${successCount} out of ${products.length} products to Firebase`);
+  // Then save the full product list
+  try {
+    await firebaseService.setCachedData('shop', 'products', {
+      content: {
+        products: products,
+        timestamp: Date.now()
+      }
+    });
+    console.log('✓ Saved complete product list');
+  } catch (error) {
+    console.error('✗ Failed to save complete product list:', error.message);
+  }
+
+  // Summary
+  console.log('\n=== Save Summary ===');
+  console.log(`Successfully saved: ${successCount}/${products.length} products`);
+  
+  if (errors.length > 0) {
+    console.log('\nFailed products:');
+    errors.forEach(({ product, error }) => {
+      console.log(`- ${product}: ${error}`);
+    });
+  }
+
+  return successCount;
 }
 
+// Add this new function to create a summary
+async function createProductSummary(products, filename = 'product-summary.json') {
+  const summary = products.map(product => ({
+    title: product.title,
+    price: `₹${product.price}`,
+    category: product.category,
+    rating: `${product.rating}/5`,
+    reviews: product.reviews,
+    link: product.affiliateLink
+  }));
+
+  // Create a formatted string for console output
+  const consoleOutput = summary.map((item, index) => `
+Product ${index + 1}:
+  Title: ${item.title}
+  Price: ${item.price}
+  Category: ${item.category}
+  Rating: ${item.rating} (${item.reviews} reviews)
+  Link: ${item.link}
+`).join('\n');
+
+  // Save formatted JSON
+  const jsonContent = JSON.stringify(summary, null, 2);
+  await fs.writeFile(filename, jsonContent);
+
+  // Print to console
+  console.log('\n=== Product Summary ===');
+  console.log(consoleOutput);
+  console.log(`Summary saved to ${filename}`);
+}
+
+// Modify the main function to include summary creation
 async function main() {
   try {
     const allProducts = [];
@@ -201,6 +288,9 @@ async function main() {
 
     // Save to Firebase
     await saveProductsToFirebase(allProducts);
+
+    // Create and save summary
+    await createProductSummary(allProducts);
 
   } catch (error) {
     console.error('Error in main process:', error);
