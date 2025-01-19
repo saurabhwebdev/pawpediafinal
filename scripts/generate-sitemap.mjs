@@ -42,14 +42,25 @@ async function generateSitemap() {
       }
     }
 
-    // Get blog posts
-    const blogPosts = await firebaseService.getCachedData('blog', 'posts');
-    const blogUrls = blogPosts?.content?.posts?.map(post => ({
-      url: `blog/${post.slug}`,
-      priority: '0.6',
-      changefreq: 'monthly',
-      lastmod: new Date(post.timestamp).toISOString().split('T')[0]
-    })) || [];
+    // Updated blog posts fetching to match Blog.jsx
+    console.log('Fetching blog posts...');
+    const posts = await firebaseService.getAllPosts();
+    console.log('Blog posts data:', posts.length || 0, 'posts found');
+    
+    const blogUrls = [];
+    if (posts && posts.length > 0) {
+      for (const post of posts) {
+        if (post.slug) {
+          blogUrls.push({
+            url: `blog/${post.slug}`,
+            priority: '0.6',
+            changefreq: 'monthly',
+            lastmod: new Date(post.timestamp).toISOString().split('T')[0]
+          });
+          console.log(`Added blog URL: blog/${post.slug}`);
+        }
+      }
+    }
 
     // Get facts
     const facts = await firebaseService.getCachedData('facts', 'facts');
@@ -78,13 +89,33 @@ async function generateSitemap() {
       ...shopUrls
     ];
 
-    // Generate XML
+    // Add more detailed logging for URL generation
+    console.log('Total URLs to be added:', allUrls.length);
+    console.log('Blog URLs to be added:', blogUrls.length);
+
+    // Generate XML with explicit blog URL section
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrls.map(({ url, priority, changefreq, lastmod }) => `  <url>
+  <!-- Base URLs -->
+${baseUrls.map(({ url, priority, changefreq }) => `  <url>
     <loc>https://pawpedia.com/${url}</loc>
     <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}
+    <priority>${priority}</priority>
+  </url>`).join('\n')}
+
+  <!-- Blog URLs -->
+${blogUrls.map(({ url, priority, changefreq, lastmod }) => `  <url>
+    <loc>https://pawpedia.com/${url}</loc>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+    <lastmod>${lastmod}</lastmod>
+  </url>`).join('\n')}
+
+  <!-- Other URLs -->
+${[...breedUrls, ...factUrls, ...shopUrls].map(({ url, priority, changefreq }) => `  <url>
+    <loc>https://pawpedia.com/${url}</loc>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
 

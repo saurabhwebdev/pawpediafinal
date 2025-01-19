@@ -116,11 +116,11 @@ async function generateAndCacheBlogPosts() {
       
         const image = await dogApi.getRandomImage();
         const slug = createSlug(topic);
-        
-        const post = {
+      
+      const post = {
           id: slug,
-          ...blogContent,
-          image: image,
+        ...blogContent,
+        image: image,
           timestamp: Date.now(),
           slug: slug
         };
