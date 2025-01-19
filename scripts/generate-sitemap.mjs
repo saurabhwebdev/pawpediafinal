@@ -98,14 +98,14 @@ async function generateSitemap() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Base URLs -->
 ${baseUrls.map(({ url, priority, changefreq }) => `  <url>
-    <loc>https://pawpedia.com/${url}</loc>
+    <loc>https://pawpedia.xyz/${url}</loc>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`).join('\n')}
 
   <!-- Blog URLs -->
 ${blogUrls.map(({ url, priority, changefreq, lastmod }) => `  <url>
-    <loc>https://pawpedia.com/${url}</loc>
+    <loc>https://pawpedia.xyz/${url}</loc>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     <lastmod>${lastmod}</lastmod>
@@ -113,7 +113,7 @@ ${blogUrls.map(({ url, priority, changefreq, lastmod }) => `  <url>
 
   <!-- Other URLs -->
 ${[...breedUrls, ...factUrls, ...shopUrls].map(({ url, priority, changefreq }) => `  <url>
-    <loc>https://pawpedia.com/${url}</loc>
+    <loc>https://pawpedia.xyz/${url}</loc>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`).join('\n')}
