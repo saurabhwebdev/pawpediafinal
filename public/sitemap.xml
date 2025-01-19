@@ -2,318 +2,378 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Base URLs -->
   <url>
-    <loc>https://pawpedia.com/</loc>
+    <loc>https://pawpedia.xyz/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds</loc>
+    <loc>https://pawpedia.xyz/breeds</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/random</loc>
+    <loc>https://pawpedia.xyz/random</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog</loc>
+    <loc>https://pawpedia.xyz/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/facts</loc>
+    <loc>https://pawpedia.xyz/facts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/shop</loc>
+    <loc>https://pawpedia.xyz/shop</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/privacy</loc>
+    <loc>https://pawpedia.xyz/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/terms</loc>
+    <loc>https://pawpedia.xyz/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/security</loc>
+    <loc>https://pawpedia.xyz/security</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- Blog URLs -->
   <url>
-    <loc>https://pawpedia.com/blog/alternative-therapies-for-dogs-acupuncture-massage-and-more</loc>
+    <loc>https://pawpedia.xyz/blog/alternative-therapies-for-dogs-acupuncture-massage-and-more</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/bathing-your-dog-how-often-and-best-practices</loc>
+    <loc>https://pawpedia.xyz/blog/bathing-your-dog-how-often-and-best-practices</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/choosing-the-right-groomer-for-your-dog</loc>
+    <loc>https://pawpedia.xyz/blog/choosing-the-right-groomer-for-your-dog</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/clicker-training-for-dogs-how-it-works-and-its-benefits</loc>
+    <loc>https://pawpedia.xyz/blog/clicker-training-for-dogs-how-it-works-and-its-benefits</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/common-dog-behavior-problems-and-how-to-fix-them</loc>
+    <loc>https://pawpedia.xyz/blog/common-dog-behavior-problems-and-how-to-fix-them</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/common-health-issues-in-dogs-and-how-to-prevent-them</loc>
+    <loc>https://pawpedia.xyz/blog/common-health-issues-in-dogs-and-how-to-prevent-them</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/crate-training-making-it-a-positive-experience</loc>
+    <loc>https://pawpedia.xyz/blog/crate-training-making-it-a-positive-experience</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dealing-with-picky-eaters-encouraging-your-dog-to-eat</loc>
+    <loc>https://pawpedia.xyz/blog/dealing-with-picky-eaters-encouraging-your-dog-to-eat</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dealing-with-separation-anxiety-in-dogs</loc>
+    <loc>https://pawpedia.xyz/blog/dealing-with-separation-anxiety-in-dogs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dealing-with-shedding-how-to-manage-dog-hair</loc>
+    <loc>https://pawpedia.xyz/blog/dealing-with-shedding-how-to-manage-dog-hair</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dental-care-for-dogs-keeping-those-canines-clean</loc>
+    <loc>https://pawpedia.xyz/blog/dental-care-for-dogs-keeping-those-canines-clean</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/diy-dog-grooming-tips-and-tools-for-home-grooming</loc>
+    <loc>https://pawpedia.xyz/blog/dental-hygiene-brushing-your-dogs-teeth</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/dog-breeds-with-long-lifespans-companions-for-the-long-haul</loc>
+    <loc>https://pawpedia.xyz/blog/diy-dog-grooming-tips-and-tools-for-home-grooming</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/feeding-senior-dogs-adjusting-diet-for-aging-pets</loc>
+    <loc>https://pawpedia.xyz/blog/dog-breeds-with-long-lifespans-companions-for-the-long-haul</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/grain-free-dog-foods-are-they-really-better</loc>
+    <loc>https://pawpedia.xyz/blog/ear-cleaning-preventing-infections-and-maintaining-health</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/guard-dog-breeds-protecting-your-home-and-family</loc>
+    <loc>https://pawpedia.xyz/blog/feeding-senior-dogs-adjusting-diet-for-aging-pets</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/homemade-dog-food-recipes-healthy-and-affordable</loc>
+    <loc>https://pawpedia.xyz/blog/grain-free-dog-foods-are-they-really-better</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/house-training-a-puppy-effective-methods-and-tips</loc>
+    <loc>https://pawpedia.xyz/blog/grooming-tools-every-dog-owner-should-have</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/how-to-train-your-puppy-a-beginners-guide</loc>
+    <loc>https://pawpedia.xyz/blog/guard-dog-breeds-protecting-your-home-and-family</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/human-foods-that-are-safe-and-unsafe-for-dogs</loc>
+    <loc>https://pawpedia.xyz/blog/homemade-dog-food-recipes-healthy-and-affordable</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/hypoallergenic-dog-breeds-for-allergy-sufferers</loc>
+    <loc>https://pawpedia.xyz/blog/house-training-a-puppy-effective-methods-and-tips</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/intelligent-dog-breeds-top-picks-for-training-enthusiasts</loc>
+    <loc>https://pawpedia.xyz/blog/how-to-train-your-puppy-a-beginners-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/large-dog-breeds-suited-for-families-with-children</loc>
+    <loc>https://pawpedia.xyz/blog/human-foods-that-are-safe-and-unsafe-for-dogs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/leash-training-teaching-your-dog-to-walk-politely</loc>
+    <loc>https://pawpedia.xyz/blog/hypoallergenic-dog-breeds-for-allergy-sufferers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/low-maintenance-dog-breeds-for-busy-owners</loc>
+    <loc>https://pawpedia.xyz/blog/intelligent-dog-breeds-top-picks-for-training-enthusiasts</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/mental-stimulation-keeping-your-dogs-mind-sharp</loc>
+    <loc>https://pawpedia.xyz/blog/large-dog-breeds-suited-for-families-with-children</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/nutrition-tips-for-a-healthy-dog-diet</loc>
+    <loc>https://pawpedia.xyz/blog/leash-training-teaching-your-dog-to-walk-politely</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/rare-and-exotic-dog-breeds-what-you-need-to-know</loc>
+    <loc>https://pawpedia.xyz/blog/low-maintenance-dog-breeds-for-busy-owners</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/raw-food-diets-for-dogs-pros-and-cons</loc>
+    <loc>https://pawpedia.xyz/blog/mental-stimulation-keeping-your-dogs-mind-sharp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/recognizing-and-treating-allergies-in-dogs</loc>
+    <loc>https://pawpedia.xyz/blog/microchipping-your-dog-benefits-and-considerations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/seasonal-grooming-tips-keeping-your-dog-comfortable-year-round</loc>
+    <loc>https://pawpedia.xyz/blog/nail-trimming-keeping-your-dogs-paws-healthy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/small-dog-breeds-perfect-for-apartment-living</loc>
+    <loc>https://pawpedia.xyz/blog/nutrition-tips-for-a-healthy-dog-diet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/socializing-your-dog-tips-for-a-well-adjusted-pet</loc>
+    <loc>https://pawpedia.xyz/blog/pet-insurance-is-it-worth-the-investment</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/supplements-for-dogs-what-you-should-know</loc>
+    <loc>https://pawpedia.xyz/blog/rare-and-exotic-dog-breeds-what-you-need-to-know</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/the-benefits-of-positive-reinforcement-in-dog-training</loc>
+    <loc>https://pawpedia.xyz/blog/raw-food-diets-for-dogs-pros-and-cons</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/the-benefits-of-regular-exercise-for-dogs</loc>
+    <loc>https://pawpedia.xyz/blog/recognizing-and-reporting-animal-cruelty</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/the-impact-of-diet-on-dog-behavior</loc>
+    <loc>https://pawpedia.xyz/blog/recognizing-and-treating-allergies-in-dogs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/the-importance-of-regular-vet-check-ups</loc>
+    <loc>https://pawpedia.xyz/blog/seasonal-grooming-tips-keeping-your-dog-comfortable-year-round</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/the-rise-of-pet-obesity-causes-and-solutions</loc>
+    <loc>https://pawpedia.xyz/blog/skin-care-for-dogs-preventing-and-treating-issues</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/the-role-of-probiotics-in-canine-health</loc>
+    <loc>https://pawpedia.xyz/blog/small-dog-breeds-perfect-for-apartment-living</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/top-10-most-popular-dog-breeds-in-2025</loc>
+    <loc>https://pawpedia.xyz/blog/socializing-your-dog-tips-for-a-well-adjusted-pet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/understanding-canine-body-language-what-your-dog-is-telling-you</loc>
+    <loc>https://pawpedia.xyz/blog/supplements-for-dogs-what-you-should-know</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/understanding-dog-food-labels-what-to-look-for</loc>
+    <loc>https://pawpedia.xyz/blog/the-benefits-of-positive-reinforcement-in-dog-training</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/understanding-mixed-breed-dogs-benefits-and-challenges</loc>
+    <loc>https://pawpedia.xyz/blog/the-benefits-of-regular-exercise-for-dogs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://pawpedia.com/blog/vaccination-schedule-for-puppies-and-adult-dogs</loc>
+    <loc>https://pawpedia.xyz/blog/the-impact-of-diet-on-dog-behavior</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/the-importance-of-regular-vet-check-ups</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/the-rise-of-pet-obesity-causes-and-solutions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/the-role-of-probiotics-in-canine-health</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/top-10-most-popular-dog-breeds-in-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/traveling-with-your-dog-safety-tips-and-regulations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/understanding-canine-body-language-what-your-dog-is-telling-you</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/understanding-dog-food-labels-what-to-look-for</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/understanding-dog-leash-laws-in-your-area</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/understanding-mixed-breed-dogs-benefits-and-challenges</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-01-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pawpedia.xyz/blog/vaccination-schedule-for-puppies-and-adult-dogs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2025-01-19</lastmod>
@@ -321,1032 +381,1032 @@
 
   <!-- Other URLs -->
   <url>
-    <loc>https://pawpedia.com/breeds/affenpinscher</loc>
+    <loc>https://pawpedia.xyz/breeds/affenpinscher</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/african</loc>
+    <loc>https://pawpedia.xyz/breeds/african</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/airedale</loc>
+    <loc>https://pawpedia.xyz/breeds/airedale</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/akita</loc>
+    <loc>https://pawpedia.xyz/breeds/akita</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/appenzeller</loc>
+    <loc>https://pawpedia.xyz/breeds/appenzeller</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/australian</loc>
+    <loc>https://pawpedia.xyz/breeds/australian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/australian/kelpie</loc>
+    <loc>https://pawpedia.xyz/breeds/australian/kelpie</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/australian/shepherd</loc>
+    <loc>https://pawpedia.xyz/breeds/australian/shepherd</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bakharwal</loc>
+    <loc>https://pawpedia.xyz/breeds/bakharwal</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bakharwal/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/bakharwal/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/basenji</loc>
+    <loc>https://pawpedia.xyz/breeds/basenji</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/beagle</loc>
+    <loc>https://pawpedia.xyz/breeds/beagle</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bluetick</loc>
+    <loc>https://pawpedia.xyz/breeds/bluetick</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/borzoi</loc>
+    <loc>https://pawpedia.xyz/breeds/borzoi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bouvier</loc>
+    <loc>https://pawpedia.xyz/breeds/bouvier</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/boxer</loc>
+    <loc>https://pawpedia.xyz/breeds/boxer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/brabancon</loc>
+    <loc>https://pawpedia.xyz/breeds/brabancon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/briard</loc>
+    <loc>https://pawpedia.xyz/breeds/briard</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/buhund</loc>
+    <loc>https://pawpedia.xyz/breeds/buhund</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/buhund/norwegian</loc>
+    <loc>https://pawpedia.xyz/breeds/buhund/norwegian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bulldog</loc>
+    <loc>https://pawpedia.xyz/breeds/bulldog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bulldog/boston</loc>
+    <loc>https://pawpedia.xyz/breeds/bulldog/boston</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bulldog/english</loc>
+    <loc>https://pawpedia.xyz/breeds/bulldog/english</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bulldog/french</loc>
+    <loc>https://pawpedia.xyz/breeds/bulldog/french</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bullterrier</loc>
+    <loc>https://pawpedia.xyz/breeds/bullterrier</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/bullterrier/staffordshire</loc>
+    <loc>https://pawpedia.xyz/breeds/bullterrier/staffordshire</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/cattledog</loc>
+    <loc>https://pawpedia.xyz/breeds/cattledog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/cattledog/australian</loc>
+    <loc>https://pawpedia.xyz/breeds/cattledog/australian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/cavapoo</loc>
+    <loc>https://pawpedia.xyz/breeds/cavapoo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/chihuahua</loc>
+    <loc>https://pawpedia.xyz/breeds/chihuahua</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/chippiparai</loc>
+    <loc>https://pawpedia.xyz/breeds/chippiparai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/chippiparai/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/chippiparai/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/chow</loc>
+    <loc>https://pawpedia.xyz/breeds/chow</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/clumber</loc>
+    <loc>https://pawpedia.xyz/breeds/clumber</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/cockapoo</loc>
+    <loc>https://pawpedia.xyz/breeds/cockapoo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/collie</loc>
+    <loc>https://pawpedia.xyz/breeds/collie</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/collie/border</loc>
+    <loc>https://pawpedia.xyz/breeds/collie/border</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/coonhound</loc>
+    <loc>https://pawpedia.xyz/breeds/coonhound</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/corgi</loc>
+    <loc>https://pawpedia.xyz/breeds/corgi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/corgi/cardigan</loc>
+    <loc>https://pawpedia.xyz/breeds/corgi/cardigan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/cotondetulear</loc>
+    <loc>https://pawpedia.xyz/breeds/cotondetulear</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/dachshund</loc>
+    <loc>https://pawpedia.xyz/breeds/dachshund</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/dalmatian</loc>
+    <loc>https://pawpedia.xyz/breeds/dalmatian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/dane</loc>
+    <loc>https://pawpedia.xyz/breeds/dane</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/dane/great</loc>
+    <loc>https://pawpedia.xyz/breeds/dane/great</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/danish</loc>
+    <loc>https://pawpedia.xyz/breeds/danish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/danish/swedish</loc>
+    <loc>https://pawpedia.xyz/breeds/danish/swedish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/deerhound</loc>
+    <loc>https://pawpedia.xyz/breeds/deerhound</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/deerhound/scottish</loc>
+    <loc>https://pawpedia.xyz/breeds/deerhound/scottish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/dhole</loc>
+    <loc>https://pawpedia.xyz/breeds/dhole</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/dingo</loc>
+    <loc>https://pawpedia.xyz/breeds/dingo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/doberman</loc>
+    <loc>https://pawpedia.xyz/breeds/doberman</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/elkhound</loc>
+    <loc>https://pawpedia.xyz/breeds/elkhound</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/elkhound/norwegian</loc>
+    <loc>https://pawpedia.xyz/breeds/elkhound/norwegian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/entlebucher</loc>
+    <loc>https://pawpedia.xyz/breeds/entlebucher</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/eskimo</loc>
+    <loc>https://pawpedia.xyz/breeds/eskimo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/finnish</loc>
+    <loc>https://pawpedia.xyz/breeds/finnish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/finnish/lapphund</loc>
+    <loc>https://pawpedia.xyz/breeds/finnish/lapphund</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/frise</loc>
+    <loc>https://pawpedia.xyz/breeds/frise</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/frise/bichon</loc>
+    <loc>https://pawpedia.xyz/breeds/frise/bichon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/gaddi</loc>
+    <loc>https://pawpedia.xyz/breeds/gaddi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/gaddi/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/gaddi/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/germanshepherd</loc>
+    <loc>https://pawpedia.xyz/breeds/germanshepherd</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/greyhound</loc>
+    <loc>https://pawpedia.xyz/breeds/greyhound</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/greyhound/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/greyhound/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/greyhound/italian</loc>
+    <loc>https://pawpedia.xyz/breeds/greyhound/italian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/groenendael</loc>
+    <loc>https://pawpedia.xyz/breeds/groenendael</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/havanese</loc>
+    <loc>https://pawpedia.xyz/breeds/havanese</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound</loc>
+    <loc>https://pawpedia.xyz/breeds/hound</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound/afghan</loc>
+    <loc>https://pawpedia.xyz/breeds/hound/afghan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound/basset</loc>
+    <loc>https://pawpedia.xyz/breeds/hound/basset</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound/blood</loc>
+    <loc>https://pawpedia.xyz/breeds/hound/blood</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound/english</loc>
+    <loc>https://pawpedia.xyz/breeds/hound/english</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound/ibizan</loc>
+    <loc>https://pawpedia.xyz/breeds/hound/ibizan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound/plott</loc>
+    <loc>https://pawpedia.xyz/breeds/hound/plott</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/hound/walker</loc>
+    <loc>https://pawpedia.xyz/breeds/hound/walker</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/husky</loc>
+    <loc>https://pawpedia.xyz/breeds/husky</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/keeshond</loc>
+    <loc>https://pawpedia.xyz/breeds/keeshond</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/kelpie</loc>
+    <loc>https://pawpedia.xyz/breeds/kelpie</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/kombai</loc>
+    <loc>https://pawpedia.xyz/breeds/kombai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/komondor</loc>
+    <loc>https://pawpedia.xyz/breeds/komondor</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/kuvasz</loc>
+    <loc>https://pawpedia.xyz/breeds/kuvasz</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/labradoodle</loc>
+    <loc>https://pawpedia.xyz/breeds/labradoodle</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/labrador</loc>
+    <loc>https://pawpedia.xyz/breeds/labrador</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/leonberg</loc>
+    <loc>https://pawpedia.xyz/breeds/leonberg</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/lhasa</loc>
+    <loc>https://pawpedia.xyz/breeds/lhasa</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/malamute</loc>
+    <loc>https://pawpedia.xyz/breeds/malamute</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/malinois</loc>
+    <loc>https://pawpedia.xyz/breeds/malinois</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/maltese</loc>
+    <loc>https://pawpedia.xyz/breeds/maltese</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mastiff</loc>
+    <loc>https://pawpedia.xyz/breeds/mastiff</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mastiff/bull</loc>
+    <loc>https://pawpedia.xyz/breeds/mastiff/bull</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mastiff/english</loc>
+    <loc>https://pawpedia.xyz/breeds/mastiff/english</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mastiff/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/mastiff/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mastiff/tibetan</loc>
+    <loc>https://pawpedia.xyz/breeds/mastiff/tibetan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mexicanhairless</loc>
+    <loc>https://pawpedia.xyz/breeds/mexicanhairless</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mix</loc>
+    <loc>https://pawpedia.xyz/breeds/mix</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mountain</loc>
+    <loc>https://pawpedia.xyz/breeds/mountain</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mountain/bernese</loc>
+    <loc>https://pawpedia.xyz/breeds/mountain/bernese</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mountain/swiss</loc>
+    <loc>https://pawpedia.xyz/breeds/mountain/swiss</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mudhol</loc>
+    <loc>https://pawpedia.xyz/breeds/mudhol</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/mudhol/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/mudhol/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/newfoundland</loc>
+    <loc>https://pawpedia.xyz/breeds/newfoundland</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/otterhound</loc>
+    <loc>https://pawpedia.xyz/breeds/otterhound</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/ovcharka</loc>
+    <loc>https://pawpedia.xyz/breeds/ovcharka</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/ovcharka/caucasian</loc>
+    <loc>https://pawpedia.xyz/breeds/ovcharka/caucasian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/papillon</loc>
+    <loc>https://pawpedia.xyz/breeds/papillon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pariah</loc>
+    <loc>https://pawpedia.xyz/breeds/pariah</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pariah/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/pariah/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pekinese</loc>
+    <loc>https://pawpedia.xyz/breeds/pekinese</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pembroke</loc>
+    <loc>https://pawpedia.xyz/breeds/pembroke</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pinscher</loc>
+    <loc>https://pawpedia.xyz/breeds/pinscher</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pinscher/miniature</loc>
+    <loc>https://pawpedia.xyz/breeds/pinscher/miniature</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pitbull</loc>
+    <loc>https://pawpedia.xyz/breeds/pitbull</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pointer</loc>
+    <loc>https://pawpedia.xyz/breeds/pointer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pointer/german</loc>
+    <loc>https://pawpedia.xyz/breeds/pointer/german</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pointer/germanlonghair</loc>
+    <loc>https://pawpedia.xyz/breeds/pointer/germanlonghair</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pomeranian</loc>
+    <loc>https://pawpedia.xyz/breeds/pomeranian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/poodle</loc>
+    <loc>https://pawpedia.xyz/breeds/poodle</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/poodle/medium</loc>
+    <loc>https://pawpedia.xyz/breeds/poodle/medium</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/poodle/miniature</loc>
+    <loc>https://pawpedia.xyz/breeds/poodle/miniature</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/poodle/standard</loc>
+    <loc>https://pawpedia.xyz/breeds/poodle/standard</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/poodle/toy</loc>
+    <loc>https://pawpedia.xyz/breeds/poodle/toy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pug</loc>
+    <loc>https://pawpedia.xyz/breeds/pug</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/puggle</loc>
+    <loc>https://pawpedia.xyz/breeds/puggle</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/pyrenees</loc>
+    <loc>https://pawpedia.xyz/breeds/pyrenees</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/rajapalayam</loc>
+    <loc>https://pawpedia.xyz/breeds/rajapalayam</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/rajapalayam/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/rajapalayam/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/redbone</loc>
+    <loc>https://pawpedia.xyz/breeds/redbone</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/retriever</loc>
+    <loc>https://pawpedia.xyz/breeds/retriever</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/retriever/chesapeake</loc>
+    <loc>https://pawpedia.xyz/breeds/retriever/chesapeake</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/retriever/curly</loc>
+    <loc>https://pawpedia.xyz/breeds/retriever/curly</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/retriever/flatcoated</loc>
+    <loc>https://pawpedia.xyz/breeds/retriever/flatcoated</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/retriever/golden</loc>
+    <loc>https://pawpedia.xyz/breeds/retriever/golden</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/ridgeback</loc>
+    <loc>https://pawpedia.xyz/breeds/ridgeback</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/ridgeback/rhodesian</loc>
+    <loc>https://pawpedia.xyz/breeds/ridgeback/rhodesian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/rottweiler</loc>
+    <loc>https://pawpedia.xyz/breeds/rottweiler</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/saluki</loc>
+    <loc>https://pawpedia.xyz/breeds/saluki</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/samoyed</loc>
+    <loc>https://pawpedia.xyz/breeds/samoyed</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/schipperke</loc>
+    <loc>https://pawpedia.xyz/breeds/schipperke</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/schnauzer</loc>
+    <loc>https://pawpedia.xyz/breeds/schnauzer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/schnauzer/giant</loc>
+    <loc>https://pawpedia.xyz/breeds/schnauzer/giant</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/schnauzer/miniature</loc>
+    <loc>https://pawpedia.xyz/breeds/schnauzer/miniature</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/segugio</loc>
+    <loc>https://pawpedia.xyz/breeds/segugio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/segugio/italian</loc>
+    <loc>https://pawpedia.xyz/breeds/segugio/italian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/setter</loc>
+    <loc>https://pawpedia.xyz/breeds/setter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/setter/english</loc>
+    <loc>https://pawpedia.xyz/breeds/setter/english</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/setter/gordon</loc>
+    <loc>https://pawpedia.xyz/breeds/setter/gordon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/setter/irish</loc>
+    <loc>https://pawpedia.xyz/breeds/setter/irish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/sharpei</loc>
+    <loc>https://pawpedia.xyz/breeds/sharpei</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/sheepdog</loc>
+    <loc>https://pawpedia.xyz/breeds/sheepdog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/sheepdog/english</loc>
+    <loc>https://pawpedia.xyz/breeds/sheepdog/english</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/sheepdog/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/sheepdog/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/sheepdog/shetland</loc>
+    <loc>https://pawpedia.xyz/breeds/sheepdog/shetland</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/shiba</loc>
+    <loc>https://pawpedia.xyz/breeds/shiba</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/shihtzu</loc>
+    <loc>https://pawpedia.xyz/breeds/shihtzu</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel/blenheim</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel/blenheim</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel/brittany</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel/brittany</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel/cocker</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel/cocker</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel/irish</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel/irish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel/japanese</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel/japanese</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel/sussex</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel/sussex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spaniel/welsh</loc>
+    <loc>https://pawpedia.xyz/breeds/spaniel/welsh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spitz</loc>
+    <loc>https://pawpedia.xyz/breeds/spitz</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spitz/indian</loc>
+    <loc>https://pawpedia.xyz/breeds/spitz/indian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/spitz/japanese</loc>
+    <loc>https://pawpedia.xyz/breeds/spitz/japanese</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/springer</loc>
+    <loc>https://pawpedia.xyz/breeds/springer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/springer/english</loc>
+    <loc>https://pawpedia.xyz/breeds/springer/english</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/stbernard</loc>
+    <loc>https://pawpedia.xyz/breeds/stbernard</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/american</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/american</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/australian</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/australian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/bedlington</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/bedlington</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/border</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/border</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/cairn</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/cairn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/dandie</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/dandie</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/fox</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/fox</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/irish</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/irish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/kerryblue</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/kerryblue</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/lakeland</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/lakeland</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/norfolk</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/norfolk</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/norwich</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/norwich</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/patterdale</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/patterdale</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/russell</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/russell</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/scottish</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/scottish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/sealyham</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/sealyham</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/silky</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/silky</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/tibetan</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/tibetan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/toy</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/toy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/welsh</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/welsh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/westhighland</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/westhighland</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/wheaten</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/wheaten</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/terrier/yorkshire</loc>
+    <loc>https://pawpedia.xyz/breeds/terrier/yorkshire</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/tervuren</loc>
+    <loc>https://pawpedia.xyz/breeds/tervuren</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/vizsla</loc>
+    <loc>https://pawpedia.xyz/breeds/vizsla</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/waterdog</loc>
+    <loc>https://pawpedia.xyz/breeds/waterdog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/waterdog/spanish</loc>
+    <loc>https://pawpedia.xyz/breeds/waterdog/spanish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/weimaraner</loc>
+    <loc>https://pawpedia.xyz/breeds/weimaraner</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/whippet</loc>
+    <loc>https://pawpedia.xyz/breeds/whippet</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/wolfhound</loc>
+    <loc>https://pawpedia.xyz/breeds/wolfhound</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/breeds/wolfhound/irish</loc>
+    <loc>https://pawpedia.xyz/breeds/wolfhound/irish</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/shop?category=food</loc>
+    <loc>https://pawpedia.xyz/shop?category=food</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/shop?category=toys</loc>
+    <loc>https://pawpedia.xyz/shop?category=toys</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/shop?category=accessories</loc>
+    <loc>https://pawpedia.xyz/shop?category=accessories</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/shop?category=grooming</loc>
+    <loc>https://pawpedia.xyz/shop?category=grooming</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pawpedia.com/shop?category=health</loc>
+    <loc>https://pawpedia.xyz/shop?category=health</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
